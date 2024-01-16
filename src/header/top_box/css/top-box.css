@@ -1,3 +1,5 @@
+header { height: 60px; }
+
 .top-containner-box { overflow: auto; }
 .top-containner-box > div { display: inline-block; }
 .top-title { margin-left : 50px; margin-top: 5px; }
