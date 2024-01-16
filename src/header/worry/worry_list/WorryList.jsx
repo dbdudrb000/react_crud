@@ -18,7 +18,7 @@ const WorryList = () => {
                 <ul>
                     {
                         worryList.map((item, index) => {
-                            return <li>
+                            return <li >
                                     <a>{item.worryName}</a>
                                   </li>
                         })

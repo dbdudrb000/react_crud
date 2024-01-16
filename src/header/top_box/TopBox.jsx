@@ -1,9 +1,27 @@
 import React from "react";
 import './css/top-box.css';
+import {Route, Routes, BrowserRouter, Link } from 'react-router-dom';
+
+import SignInCompoment from './signIn/SignInCompoment';
+import SignUpCompoment from './signUp/SignUpCompoment';
+
 
 const TopBox = () => {
+/* 
+    const navigate = useNavigate();
+    const loginMove = () => {
+        navigate('/login');
+    }
+*/
+
     return (
         <React.Fragment>
+            <BrowserRouter>
+                <Routes>
+                    <Route path={'login'} element={<SignInCompoment />} />
+                    <Route path={'logup'} element={<SignUpCompoment />} />
+                </Routes>
+            
             <div className="top-containner-box">
                 <div className="top-title">
                     <h2>고민상담</h2>
@@ -12,7 +30,7 @@ const TopBox = () => {
                     <nav>
                         <ul>
                             <li>
-                                <a onClick={() => { alert('로그인입니다.') }}>로그인</a>
+                                <Link to="login">로그인2</Link>
                             </li>
                             <li>
                                 <a onClick={() => { alert('회원가입 버튼입니다.'); }}>회원가입</a>
@@ -21,7 +39,7 @@ const TopBox = () => {
                     </nav>
                 </div>
             </div>
-
+            </BrowserRouter>
         </React.Fragment>
     );
 }
