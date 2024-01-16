@@ -1,0 +1,5 @@
+.worry-box { display: flex;  }
+.worry-box ul { display: flex;  }
+.worry-box li { list-style: none; padding: 10px;}
+
+.worry-box a:hover { cursor: pointer; }
