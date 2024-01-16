@@ -38,6 +38,5 @@
 }
 
 * { margin: 0px; padding: 0px; box-sizing: border-box;}
-header { height: 60px; }
 .worry-kind { background-color: blue; }
 .inner { width: 1200px; margin: auto; height: 1080px; }
