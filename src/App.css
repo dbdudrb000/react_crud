@@ -38,5 +38,5 @@
 }
 
 * { margin: 0px; padding: 0px; box-sizing: border-box;}
-.worry-kind { background-color: blue; }
+.worry-kind { border: 1px solid; }
 .inner { width: 1200px; margin: auto; height: 1080px; }
