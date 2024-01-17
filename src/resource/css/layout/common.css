@@ -1,0 +1,6 @@
+* { margin: 0px; padding: 0px; box-sizing: border-box;}
+.worry-kind { border: 1px solid; }
+.inner { width: 1200px; margin: auto; height: 1080px; }
+
+.containner { width: 1200px; background: bule; height: 1000px;}
+main { display: block; }
