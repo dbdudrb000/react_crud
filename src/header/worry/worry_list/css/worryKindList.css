@@ -1,5 +1,0 @@
-.worry-box { display: flex;  }
-.worry-box ul { display: flex;  }
-.worry-box li { list-style: none; padding: 20px; border-right: 1px solid; }
-
-.worry-box a:hover { cursor: pointer; }
