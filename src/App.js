@@ -1,8 +1,7 @@
 import './App.css';
 import React from "react";
 import Header from './layout/Header';
-
-
+import HomePage from './pages/HomePage';
 
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
 
@@ -12,7 +11,7 @@ function App() {
       <BrowserRouter>
       <Header attr={"header_wrap"} />
         <Routes>
-          
+          <Route path="/" element={<HomePage />} />
         </Routes>
 {/* 
       <div className='wrap'>
