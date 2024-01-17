@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 const WorryBox = (props) => {
-    const [worry, setWorry] = useState(0);
+
+    const [worry, setWorry] = useState('all');
     const worryList = [{worryName : '전체', worryVal : 'all', },
                        {worryName : '취업문제', worryVal : 'jobProblem'},
                        {worryName : '연애문제', worryVal : 'loveProblem'},
@@ -16,12 +17,12 @@ const WorryBox = (props) => {
                        {worryName : '컴퓨터중독', worryVal : 'pcProblem'},
                        {worryName : '불안증', worryVal : 'anxietyProblem'},
                        {worryName : '트라우마', worryVal : 'traumaProblem'},
-                       {worryName : '기타', worryVal : 'theRest'},
+                       {worryName : '기타', worryVal : 'theRest'}
                     ];
     return (
         <React.Fragment>
             <div className="writing-div">
-                <button>글쓰기</button>
+                <button onClick={write}>글쓰기</button>
             </div>
 
             <div className={props.attr}>
@@ -29,16 +30,20 @@ const WorryBox = (props) => {
                     {
                         worryList.map((item, index) => {
                             return (
-                                <li className={item.worryVal}>
+                                <li className={item.worryVal} key={item.worryVal}>
                                     <a onClick={() => alert(`클릭한 메뉴는 [${item.worryName}] 입니다.`)}>{item.worryName}</a>
                                 </li>
-                            )
+                            );
                         })
                     }
                 </ul>
             </div>
         </React.Fragment>
     );
+}
+
+const write = () => {
+    alert('글을 작성하는 버튼입니다.');
 }
 
 export default WorryBox;
