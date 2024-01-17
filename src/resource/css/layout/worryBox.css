@@ -1,4 +1,4 @@
-.worry-box { display: flex; justify-content: center; margin-top: 10px;}
+.worry-box { display: flex; justify-content: center; margin-top: 5px;}
 .worry-box ul { width: 840px; }
 .worry-box li { list-style: none; float: left; border: 1px solid #ddd; padding: 20px; text-align: center; width: 120px; height:30px; line-height: 1px;  cursor: pointer;}
 .worry-box li:hover { background-color: #99999954; }
