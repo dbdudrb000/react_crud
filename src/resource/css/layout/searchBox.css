@@ -1,4 +1,4 @@
-.search-box { padding: 30px 0px 30px 0px; text-align: center; border: 1px solid;}
+.search-box { padding: 30px 0px 30px 0px; text-align: center; border: 1px solid; border-top: none; }
 .search-box > input { width: 300px; margin-right: 5px; height: 33px; border-radius: 10px; 
                       font-weight: 800; font-size: medium; font-family: SCoreDream,BlinkMacSystemFont,Malgun Gothic,맑은 고딕,helvetica,Apple SD Gothic Neo,sans-serif; 
                     }

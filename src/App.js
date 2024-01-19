@@ -12,24 +12,29 @@ function App() {
       <Header attr={"header_wrap"} />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          
+
         </Routes>
-{/* 
+{
+/*    
       <div className='wrap'>
         <div className='inner'>
-            <div className='inner-top-box'>
-              <TopBox />
-            </div>
-            <div className='worry-kind'>
-              <WorryList />
-            </div>
-          <div className='contents'>
-
+          <div className='inner-top-box'>
+            <TopBox />
           </div>
-          <footer>
-
-          </footer>
+          <div className='worry-kind'>
+            <WorryList />
+          </div>
+        <div className='contents'>
+ 
         </div>
-      </div> */}
+        <footer>
+
+        </footer>
+        </div>
+      </div>
+*/
+}
       </BrowserRouter>
     </React.Fragment>
   );
