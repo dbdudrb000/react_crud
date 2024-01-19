@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import worryJosn from "../json/worry.json";
+import { Link } from "react-router-dom";
 
 const WorryBox = (props) => {
     const [worry, setWorry] = useState('all');
@@ -7,7 +8,9 @@ const WorryBox = (props) => {
     return (
         <React.Fragment>
             <div className="writing-div">
-                <button onClick={write}>글쓰기</button>
+                <Link to="/write">
+                    <button>글쓰기</button> 
+                </Link>
             </div>
 {/* 테일윈드 */}
             <div className={props.attr}>
@@ -16,7 +19,7 @@ const WorryBox = (props) => {
                     worryJosn.worryList.map((item, index) => {
                         return (
                             <li className={item.worryVal} key={item.code}>
-                                <a onClick={() => alert(`클릭한 메뉴는 [${item.worryName}] 입니다.`)}>{item.worryName}</a>
+                                <Link onClick={() => alert(`클릭한 메뉴는 [${item.worryName}] 입니다.`)}> {item.worryName}</Link>
                             </li>
                         );
                     })
@@ -25,10 +28,6 @@ const WorryBox = (props) => {
             </div>
         </React.Fragment>
     );
-}
-
-const write = () => {
-    alert('글을 작성하는 버튼입니다.');
 }
 
 export default WorryBox;
