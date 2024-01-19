@@ -1,4 +1,5 @@
-{ "worryList" : [ {"worryName" : "전체",    "worryVal" : "all", "code" : "01"}, 
+ {
+  "worryList": [ {"worryName" : "전체",    "worryVal" : "all", "code" : "01"}, 
                   {"worryName" : "취업문제", "worryVal" : "jobProblem", "code" : "02"},
                   {"worryName" : "연애문제", "worryVal" : "loveProblem", "code" : "03"},
                   {"worryName" : "가정문제", "worryVal" : "familyProblem", "code" : "04"},
@@ -14,4 +15,4 @@
                   {"worryName" : "트라우마", "worryVal" : "traumaProblem", "code" : "14"},
                   {"worryName" : "기타",   "worryVal" : "theRest", "code" : "15"}
                 ]
-}
+ }

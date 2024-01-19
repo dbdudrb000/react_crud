@@ -1,17 +1,39 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef} from "react";
 
-const WritePage = () => {
-    const [writeTitle, setWriteTitle] = useState("");
-    const [writeKind, setWriteKind] = useState("");
-    const [nickName, setNickName] = useState("");
-    const [writePassword, setWritePassword] = useState("");
-    const [writeContent, setWriteContent] = useState("");
+const WritePage = (props) => {
+    const [writeInfo, setWriteInfo] = useState({
+        title : '',
+        writeKind : '',
+        nickName : '',
+        password : '',
+        content : '',
+    });
 
-    return (
-        <div>
-                글쓰기 작성 페이지
-        </div>
-    );
-}
+    useEffect( () => {
+        console.log(`writeInfo ==> ${JSON.stringify(writeInfo)}`);
+    },[writeInfo])
+
+        return (        
+            <div className="write-box">
+                <table>
+                    <tr className="write-content-title">
+                        <td>
+                            <div>글쓰기</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>닉네임</td>
+                        <td>
+                            <input type="text" 
+                                placeholder="닉네임"
+                                value={writeInfo.nickName}
+                                onChange={(e) => setWriteInfo({ ...writeInfo, "nickName" : e.target.value }) }
+                            />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        );
+    }    
 
 export default WritePage;
