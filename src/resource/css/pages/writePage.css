@@ -1,0 +1,3 @@
+.write-box { display: flex; justify-content: center;  margin-top: 20px;}
+.write-box > table { width: 840px; }
+.write-content-title > td { border-top: 2px solid grey; background-color: rgb(243 239 239 / 58%); height: 35px; }
