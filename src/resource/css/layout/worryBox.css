@@ -3,7 +3,6 @@
 .worry-box li { list-style: none; float: left; border: 1px solid #ddd; padding: 20px; text-align: center; width: 120px; height:30px; line-height: 1px;  cursor: pointer;}
 .worry-box li:hover { background-color: #99999954; }
 .worry-box li a { color: #999; font-weight: bold; font-size: smaller; text-decoration-line: none;}
-.worry-box li.all { background-color: #444444; }
 
 .writing-div { display: flex; justify-content: center; margin-top: 30px; margin-left: 760px; }
 .writing-div button { width: 70px; height: 35px; background-color: #444444; color: white; }

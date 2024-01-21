@@ -4,7 +4,7 @@ import { Link, useNavigate  } from "react-router-dom";
 const WritePage = () => {
     const navgate = useNavigate();
     const currentDate = new Date();
-
+    
     let year = currentDate.getFullYear();
     let month = String(currentDate.getMonth()+1).padStart(2, '0');
     let day = String(currentDate.getDate()).padStart(2, '0');
@@ -19,11 +19,12 @@ const WritePage = () => {
         nickName : '',
         password : '',
         content : '',
-        currentDate : ''
+        currentDate : '',
+        seq : 0
     });
-
+    
     const [navgateCheck, setNavgateCheck] = useState(false);
-
+    
     // 입력한된 input으로 focus() 를 사용하기위해 선언
     const inputRef_1 = useRef(null),
           inputRef_2 = useRef(null),
@@ -72,10 +73,10 @@ const WritePage = () => {
 
     const focusCheck = () => {
         if(writeInfo.nickName === '') {
-            alert('닉네임을 작성해주세요.');
+            alert('닉네임을 입력해주세요.');
             inputRef_1.current.focus();
         } else if(writeInfo.password === ''){
-            alert('페스워드를 작성해주세요.');
+            alert('비밀번호를 입력해주세요.');
             inputRef_2.current.focus();
         }else if(writeInfo.writeKind === '') {
             alert('분류를 선택해주세요.');
