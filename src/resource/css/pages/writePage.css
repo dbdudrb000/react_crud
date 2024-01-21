@@ -1,3 +1,15 @@
 .write-box { display: flex; justify-content: center;  margin-top: 20px;}
-.write-box > table { width: 840px; }
-.write-content-title > td { border-top: 2px solid grey; background-color: rgb(243 239 239 / 58%); height: 35px; }
+.write-box table { width: 840px; }
+.write-box form { width: 840px; }
+.write-box form [type="radio"] { width: 22px; }
+.write-box form tr td:first-of-type { width: 100px; padding-bottom: 15px; }
+.write-box form tr td { color: #888; border-bottom: 1px solid #888; }
+.write-box textarea { width: 100%; resize: vertical;}
+.write-box input[type="text"] { height: 25px; border-top: 1px solid #9a9a9a; border-left: 1px solid #9a9a9a; border-right: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; height: 25px; font-size: 15px; padding: 2px;}
+.write-box input[type="password"] { height: 25px; border-top: 1px solid #9a9a9a; border-left: 1px solid #9a9a9a; border-right: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; height: 25px; font-size: 15px; padding: 2px;}
+
+.write-content-title > div { border-top: 2px solid grey; background-color: rgb(243 239 239 / 58%); height: 35px; padding-left: 10px; }
+.write-content-title { width: 840px; font-weight: 800; line-height: 27px; }
+
+.write-button-box button { background-color: #444444; color: white; width: 80px; float: right; margin: 0px 10px 0px 5px;  cursor: pointer;}
+.write-button-box button a { color: white; list-style: none; text-decoration-line: none; }
