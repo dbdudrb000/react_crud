@@ -7,7 +7,7 @@ const WorryBox = (props) => {
     const [worryData, setWorryData] = useState(worryJson.worryList);
 
     useEffect(() => {
-        sessionStorage.setItem('stgData',JSON.stringify(worryData));
+        sessionStorage.setItem('stgWorryList',JSON.stringify(worryData));
     }, []);
 
     const addData = () => {
@@ -30,7 +30,9 @@ const WorryBox = (props) => {
                     worryData ? worryData.map((item, index) => {
                         return (
                             <li className={item.worryVal} key={item.code}>
-                                <Link to="" onClick={() => alert(`클릭한 메뉴는 [${item.worryName}] 입니다.`)}> {item.worryName}</Link>
+                                {/* <Link to="" onClick={() => alert(`클릭한 메뉴는 [${item.worryName}] 입니다.`)}> {item.worryName}</Link> */}
+
+                                <Link to={{ pathname: '/', state: item }}>{item.worryName}</Link>
                             </li>
                         );
                     }) : null

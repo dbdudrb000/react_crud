@@ -15,26 +15,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="write" element={<WritePage />} />
         </Routes>
-{
-/*    
-      <div className='wrap'>
-        <div className='inner'>
-          <div className='inner-top-box'>
-            <TopBox />
-          </div>
-          <div className='worry-kind'>
-            <WorryList />`
-          </div>
-        <div className='contents'>
- 
-        </div>
-        <footer>
-
-        </footer>
-        </div>
-      </div>
-*/
-}
       </BrowserRouter>
     </React.Fragment>
   );

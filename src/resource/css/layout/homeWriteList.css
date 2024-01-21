@@ -1,0 +1,21 @@
+.main-worry-write-box { display: flex; justify-content: center; margin-top: 25px; }
+.worry-write-second-box { width: 840px; }
+
+
+.main-write-thead-tr td:nth-child(1){ width: 70px; font-weight: bolder; font-size: 18px; text-align: center; padding: 2px; }
+.main-write-thead-tr td:nth-child(2) { width: 100px; text-align: center; font-size: 15px; font-weight: 600; padding: 2px;}
+.main-write-thead-tr td:nth-child(3) { width: 450px; text-align: center; font-size: 15px; font-weight: 600; padding: 2px; }
+.main-write-thead-tr td:nth-child(4) { width: 120px; text-align: center;  font-size: 15px; font-weight: 600;padding: 2px; }
+.main-write-thead-tr td:nth-child(5) { width: 100px; text-align: center; font-size: 15px; font-weight: 600;padding: 2px; }
+
+.main-write-List-tr td { padding: 7px; font-size: 12px; font-family: NanumGothic, Malgun Gothic, dotum; }
+
+.main-write-List-tr td:nth-child(1) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70px; }
+.main-write-List-tr td:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100px; }
+.main-write-List-tr td:nth-child(3) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 450px; }
+.main-write-List-tr td:nth-child(4) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 120px; }
+.main-write-List-tr td:nth-child(5) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100px; }
+
+.worry-write-second-box tbody tr:nth-child(even) { background-color: #efe6e6; }
+
+.thead-write-line { border: 1px solid #868181; width: 840px; position: absolute; }
