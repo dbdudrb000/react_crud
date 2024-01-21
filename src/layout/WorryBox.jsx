@@ -10,9 +10,8 @@ const WorryBox = (props) => {
         sessionStorage.setItem('stgWorryList',JSON.stringify(worryData));
     }, []);
 
-    const addData = () => {
-        const newData = {"worryName" : "신규항목", "worryVal" : 'new', "code" : '16'};
-        setWorryData((prevData) => [...prevData, newData]);
+    const worryClick = (clickData) => {
+        props.worryCallbackFn(clickData);
     }
     
     return (
@@ -21,18 +20,15 @@ const WorryBox = (props) => {
                 <Link to="write">
                     <button>글쓰기</button> 
                 </Link>
-                <button onClick={addData}>data 추가</button> 
             </div>
-{/* 테일윈드 */}
+
             <div className={props.attr}>
                 <ul>
                {
                     worryData ? worryData.map((item, index) => {
                         return (
-                            <li className={item.worryVal} key={item.code}>
-                                {/* <Link to="" onClick={() => alert(`클릭한 메뉴는 [${item.worryName}] 입니다.`)}> {item.worryName}</Link> */}
-
-                                <Link to={{ pathname: '/', state: item }}>{item.worryName}</Link>
+                            <li key={item.code} style={{ backgroundColor : props.checkedWorry === item.worryVal? '#444444' : '' }}>
+                                <Link to="" onClick={() => worryClick(item.worryVal)}> {item.worryName}</Link>
                             </li>
                         );
                     }) : null

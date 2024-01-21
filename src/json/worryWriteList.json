@@ -3,6 +3,6 @@
                     {"title" : "제목22222",    "writeKind" : "취업문제", "worryVal": "jobProblem","nickName" : "홍길동", "password": "123", "content" : "내용입니다." , "currentDate" : "2024-01-01", "seq" : 2},
                     {"title" : "제목33333",    "writeKind" : "수면장애", "worryVal": "sleepProblem", "nickName" : "짱구", "password": "123", "content" : "수면이 부족해" , "currentDate" : "2024-01-02", "seq" : 3},
                     {"title" : "왕따당해요....",    "writeKind" : "학교문제", "worryVal": "schoolProblem", "nickName" : "아이언맨", "password": "123", "content" : "내용입니다." , "currentDate" : "2024-01-01", "seq" : 4},
-                    {"title" : "트라우마에서 벗어나고싶어요",    "writeKind" : "트라우마", "worryVal": "traumaProblem", "nickName" : "흰둥이", "password": "123", "content" : "내용입니다." , "currentDate" : "2024-01-10", "seq" : 5}
+                    {"title" : "트라우마에서 벗어나고싶어요ㅜㅜ",    "writeKind" : "트라우마", "worryVal": "traumaProblem", "nickName" : "흰둥이", "password": "123", "content" : "내용입니다." , "currentDate" : "2024-01-10", "seq" : 5}
                   ]
 }
