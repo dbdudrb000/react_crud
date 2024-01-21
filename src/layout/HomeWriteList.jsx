@@ -38,31 +38,32 @@ const HomeWriteList = (props) => {
                         <tbody>
                             {
                                 // [전체] 선택이 아닌 선택한 카테고리의 리스트만 보여진다.
-                                worryWriteList ? worryWriteList.filter((item) => item.worryVal === props.checkedWorry && item.worryVal !== 'all').map((item, index) => {
-                                    return(
-                                        <tr key={String(item.seq)} className="main-write-List-tr">
-                                            <td>{item.seq}</td>
-                                            <td>{item.writeKind}</td>
-                                            <td>{item.title}</td>
-                                            <td>{item.nickName}</td>
-                                            <td>{item.currentDate}</td>
-                                    </tr> 
-                                    ) 
-                                }) : null
-
+                                worryWriteList ? worryWriteList.filter((item) => item.worryVal === props.checkedWorry && item.worryVal !== 'all')
+                                                               .map((item, index) => {
+                                                                    return(
+                                                                        <tr key={String(item.seq)} className="main-write-List-tr">
+                                                                            <td>{item.seq}</td>
+                                                                            <td>{item.writeKind}</td>
+                                                                            <td>{item.title}</td>
+                                                                            <td>{item.nickName}</td>
+                                                                            <td>{item.currentDate}</td>
+                                                                        </tr> 
+                                                                    ) 
+                                                                  }) : null
                             }
                             { // 카테고리 상관없이 전체 리스트가 보여진다.
-                                worryWriteList ? worryWriteList.filter(() => props.checkedWorry === 'all').map((item) => {
-                                    return(
-                                        <tr key={String(item.seq)} className="main-write-List-tr">
-                                            <td>{item.seq}</td>
-                                            <td>{item.writeKind}</td>
-                                            <td>{item.title}</td>
-                                            <td>{item.nickName}</td>
-                                            <td>{item.currentDate}</td>
-                                    </tr> 
-                                    );
-                                }) : null
+                                worryWriteList ? worryWriteList.filter(() => props.checkedWorry === 'all')
+                                                               .map((item) => {
+                                                                    return(
+                                                                        <tr key={String(item.seq)} className="main-write-List-tr">
+                                                                            <td>{item.seq}</td>
+                                                                            <td>{item.writeKind}</td>
+                                                                            <td>{item.title}</td>
+                                                                            <td>{item.nickName}</td>
+                                                                            <td>{item.currentDate}</td>
+                                                                    </tr> 
+                                                                    );
+                                                                }) : null
                             }
                         </tbody>
                     </table>
