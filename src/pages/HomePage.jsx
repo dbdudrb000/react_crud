@@ -5,17 +5,22 @@ import WorryBox from '../layout/WorryBox';
 import WorryWriteList from '../layout/HomeWriteList';
 
 const HomePage = (props) => {
+    // 카테고리 선택한 값
     const [worryChched, setWorryChched] = useState('all');
+    // 검색한 문자열
+    const [searchText, setSearchText] = useState('');
 
-    const worryHandle = (newData) => {
-        setWorryChched(newData);
+    const worryHandle = (gubn, newData) => {
+        if(gubn === 'worryBox')  setWorryChched(newData);
+        else if(gubn === 'searchBox') setSearchText(newData);
     }
 
-    return (
+    
+    return ( 
         <main>
-            <SearchBox attr="search-box" />
+            <SearchBox attr="search-box"  worryCallbackFn={worryHandle} />
             <WorryBox attr="worry-box" worryCallbackFn={worryHandle} checkedWorry={worryChched}/>
-            <WorryWriteList attr="main-worry-write-box" checkedWorry={worryChched}/>
+            <WorryWriteList attr="main-worry-write-box" checkedWorry={worryChched} search={searchText}/>
         </main>
     );
 }
