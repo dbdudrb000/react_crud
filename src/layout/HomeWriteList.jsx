@@ -15,6 +15,16 @@ const HomeWriteList = (props) => {
         }
     },[]);
 
+    /*
+       현재 페이지가 랜더링되면 무조건 검색어의 문자열로 arr를 만든다
+
+       검색어 존재 : 검색어 문자열로 includes하면 true인것들만 filteringArray 변수에 담아질테니 그것들을 뿌려질것이다<div className=""></div>
+       검색어 존재 X : 필터링없이 item그대로 대입시킨다.
+    */
+    const filteringArray = worryWriteList.filter(item => 
+        props.search !== '' ? item.title.toLowerCase().includes(props.search.toLowerCase()) : item
+    );
+
     return(
         <div className={props.attr}>
             <div className="worry-write-second-box">
@@ -38,7 +48,7 @@ const HomeWriteList = (props) => {
                         <tbody>
                             {
                                 // [전체] 선택이 아닌 선택한 카테고리의 리스트만 보여진다.
-                                worryWriteList ? worryWriteList.filter((item) => item.worryVal === props.checkedWorry && item.worryVal !== 'all')
+                                filteringArray ? filteringArray.filter((item) => item.worryVal === props.checkedWorry && item.worryVal !== 'all')
                                                                .map((item, index) => {
                                                                     return(
                                                                         <tr key={String(item.seq)} className="main-write-List-tr">
@@ -52,7 +62,7 @@ const HomeWriteList = (props) => {
                                                                   }) : null
                             }
                             { // 카테고리 상관없이 전체 리스트가 보여진다.
-                                worryWriteList ? worryWriteList.filter(() => props.checkedWorry === 'all')
+                                filteringArray ? filteringArray.filter(() => props.checkedWorry === 'all')
                                                                .map((item) => {
                                                                     return(
                                                                         <tr key={String(item.seq)} className="main-write-List-tr">

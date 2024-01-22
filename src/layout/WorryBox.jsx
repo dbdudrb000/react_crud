@@ -11,7 +11,7 @@ const WorryBox = (props) => {
     }, []);
 
     const worryClick = (clickData) => {
-        props.worryCallbackFn(clickData);
+        props.worryCallbackFn('worryBox', clickData);
     }
     
     return (
