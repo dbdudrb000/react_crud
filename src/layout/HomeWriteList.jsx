@@ -18,12 +18,13 @@ const HomeWriteList = (props) => {
     /*
        현재 페이지가 랜더링되면 무조건 검색어의 문자열로 arr를 만든다
 
-       검색어 존재 : 검색어 문자열로 includes하면 true인것들만 filteringArray 변수에 담아질테니 그것들을 뿌려질것이다<div className=""></div>
+       검색어 존재 : 검색어 문자열로 includes하면 true인것들만 filteringArray 변수에 담아질테니 그것들을 뿌려질것이다.
        검색어 존재 X : 필터링없이 item그대로 대입시킨다.
     */
-    const filteringArray = worryWriteList.filter(item => 
-        props.search !== '' ? item.title.toLowerCase().includes(props.search.toLowerCase()) : item
-    );
+
+    const filteringArray = worryWriteList.filter((item) => {
+        return props.search !== '' ? item.title.toLowerCase().includes(props.search.toLowerCase()) : item
+    });
 
     return(
         <div className={props.attr}>
