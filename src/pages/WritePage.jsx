@@ -65,7 +65,7 @@ const WritePage = () => {
         if(writeInfo.title === '' || writeInfo.writeKind === '' || writeInfo.nickName === '' || writeInfo.password === '' || writeInfo.content === '') {
             focusCheck();
         } else {
-            setWorryWriteList([...worryWriteList, writeInfo] );
+            setWorryWriteList([...worryWriteList, writeInfo]);
             setNavgateCheck(true);
             // sessionStorage.setItem('stgWorryWriteList', JSON.stringify(worryWriteList));
         }

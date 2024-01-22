@@ -16,6 +16,11 @@
 .main-write-List-tr td:nth-child(4) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 120px; }
 .main-write-List-tr td:nth-child(5) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100px; }
 
-.worry-write-second-box tbody tr:nth-child(even) { background-color: #efe6e6; }
+.worry-write-second-box tbody tr:nth-child(odd) { background-color: #efe6e6; }
 
 .thead-write-line { border: 1px solid #868181; width: 840px; position: absolute; }
+
+
+.myCheckBox-div { display: flex; justify-content: flex-end; margin-bottom: 5px;}
+.myCheckBox-div > input { margin-right: 5px; width: 15px; }
+.myCheckBox-div > label { font-weight: 800; font-size: 12px; }

@@ -26,9 +26,20 @@ const HomeWriteList = (props) => {
         return props.search !== '' ? item.title.toLowerCase().includes(props.search.toLowerCase()) : item
     });
 
+    const myWriteOnChange = (e) => {
+        props.worryCallbackFn('myWriteCheck', e.target.checked);
+    }
+
     return(
         <div className={props.attr}>
             <div className="worry-write-second-box">
+                <div className="myCheckBox-div">
+                    <input type="checkbox"
+                           name="myBoardCheck"
+                           onChange={myWriteOnChange}
+                    />
+                    <label>나의 게시글만 확인</label>
+                </div>
                 <div className="thead-write-line"></div>
                 <form>
                     <table>
@@ -49,8 +60,8 @@ const HomeWriteList = (props) => {
                         <tbody>
                             {
                                 // [전체] 선택이 아닌 선택한 카테고리의 리스트만 보여진다.
-                                filteringArray ? filteringArray.filter((item) => item.worryVal === props.checkedWorry && item.worryVal !== 'all')
-                                                               .map((item, index) => {
+                                filteringArray ? filteringArray?.filter((item) => item.worryVal === props.checkedWorry && item.worryVal !== 'all')
+                                                                .map((item, index) => {
                                                                     return(
                                                                         <tr key={String(item.seq)} className="main-write-List-tr">
                                                                             <td>{item.seq}</td>
@@ -60,7 +71,7 @@ const HomeWriteList = (props) => {
                                                                             <td>{item.currentDate}</td>
                                                                         </tr> 
                                                                     ) 
-                                                                  }) : null
+                                                                }) : null
                             }
                             { // 카테고리 상관없이 전체 리스트가 보여진다.
                                 filteringArray ? filteringArray.filter(() => props.checkedWorry === 'all')
