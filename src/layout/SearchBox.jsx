@@ -12,7 +12,7 @@ const SearchBox = (props) => {
         props.worryCallbackFn('searchBox', text);
     }
 
-    function enterkey(e) {
+    const enterkey = (e) => {
         if (e.key === 'Enter') {
             searchSubmit();
         }
