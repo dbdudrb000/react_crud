@@ -31,6 +31,7 @@ const HomeWriteList = (props) => {
     }
 
     return(
+    
         <div className={props.attr}>
             <div className="worry-write-second-box">
                 <div className="myCheckBox-div">
