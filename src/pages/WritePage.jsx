@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import { Link, useNavigate  } from "react-router-dom";
 import refCheck from "../utils/refCheck";
+import Header from "../layout/Header";
 
 const WritePage = () => {
     const navgate = useNavigate();
@@ -71,91 +72,94 @@ const WritePage = () => {
             3번인자 : focus할 객체  (useRef) - refArr 변수 참조
         */
         refCheck(writeInfo, alertMessage, refArr);
+        
     }
 
         return (        
-            <div className="write-box">
-                <div>
-                    <div className="write-content-title">
-                        <div>글쓰기</div>
-                    </div>                    
-                    <form onSubmit={writeSubmit}>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>닉네임</td>
-                                    <td>
-                                        <input type="text" 
-                                            placeholder="닉네임"
-                                            value={writeInfo.nickName}
-                                            onChange={(e) => setWriteInfo({ ...writeInfo, "nickName" : e.target.value }) }
-                                            ref={inputRef_1}
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>비밀번호</td>
-                                    <td>
-                                        <input type="password"
-                                            placeholder="암호"
-                                            value={writeInfo.password}
-                                            onChange={(e) => setWriteInfo({...writeInfo, 'password' : e.target.value})}
-                                            ref={inputRef_2}
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>분류</td>
-                                    <td>
-                                        {
-                                            worryList ? worryList.map((item, index) => {
-                                                return (
-                                                    <React.Fragment key={item.code}>
-                                                        <input type="radio" 
-                                                            name='worryCheck'
-                                                            value={item.worryName}
-                                                            onChange={(e) => setWriteInfo({...writeInfo, 'writeKind' : e.target.value, 'worryVal' : item.worryVal})}
-                                                        />
-                                                        <label>{item.worryName}</label>
-                                                    </React.Fragment>
-                                                );
-                                            }) : null
-                                        }
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>제목</td>
-                                    <td>
-                                        <input type="text"
-                                               placeholder="제목"
-                                               value={writeInfo.title}
-                                               style={{width: '100%'}}
-                                               onChange={ (e) => setWriteInfo({...writeInfo, 'title' : e.target.value}) }
-                                               ref={inputRef_3}
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style={{border: 'none'}} >내용</td>
-                                    <td style={{border: 'none'}}>
-                                        <textarea rows={25}
-                                                onChange={(e) => setWriteInfo({...writeInfo, 'content' : e.target.value})}
-                                                ref={inputRef_4}
-                                        />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div className="write-button-box">
-                            <Link to="/">
-                                <button>목록으로</button>
-                            </Link>
-                            <button type="submit">등록</button>                            
-                        </div>
-
-                    </form>
+            <React.Fragment>
+                <Header attr={"header_wrap"} />
+                <div className="write-box">
+                    <div>
+                        <div className="write-content-title">
+                            <div>글쓰기</div>
+                        </div>                    
+                        <form onSubmit={writeSubmit}>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>닉네임</td>
+                                        <td>
+                                            <input type="text" 
+                                                placeholder="닉네임"
+                                                value={writeInfo.nickName}
+                                                onChange={(e) => setWriteInfo({ ...writeInfo, "nickName" : e.target.value }) }
+                                                ref={inputRef_1}
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>비밀번호</td>
+                                        <td>
+                                            <input type="password"
+                                                placeholder="암호"
+                                                value={writeInfo.password}
+                                                onChange={(e) => setWriteInfo({...writeInfo, 'password' : e.target.value})}
+                                                ref={inputRef_2}
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>분류</td>
+                                        <td>
+                                            {
+                                                worryList ? worryList.map((item, index) => {
+                                                    return (
+                                                        <React.Fragment key={item.code}>
+                                                            <input type="radio" 
+                                                                name='worryCheck'
+                                                                value={item.worryName}
+                                                                onChange={(e) => setWriteInfo({...writeInfo, 'writeKind' : e.target.value, 'worryVal' : item.worryVal})}
+                                                            />
+                                                            <label>{item.worryName}</label>
+                                                        </React.Fragment>
+                                                    );
+                                                }) : null
+                                            }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>제목</td>
+                                        <td>
+                                            <input type="text"
+                                                placeholder="제목"
+                                                value={writeInfo.title}
+                                                style={{width: '100%'}}
+                                                onChange={ (e) => setWriteInfo({...writeInfo, 'title' : e.target.value}) }
+                                                ref={inputRef_3}
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{border: 'none'}} >내용</td>
+                                        <td style={{border: 'none'}}>
+                                            <textarea rows={25}
+                                                    onChange={(e) => setWriteInfo({...writeInfo, 'content' : e.target.value})}
+                                                    ref={inputRef_4}
+                                            />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div className="write-button-box">
+                                <Link to="/">
+                                    <button>목록으로</button>
+                                </Link>
+                                <button type="submit">등록</button>                            
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            </React.Fragment>
         );
     }    
 

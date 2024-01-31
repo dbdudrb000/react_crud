@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import worryJson from "../json/worry.json";
 import { Link } from "react-router-dom";
+import useStateManager from "../hooks/useStateManager";
 
 const WorryBox = (props) => {
     const [worry, setWorry] = useState('all');

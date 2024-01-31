@@ -4,6 +4,7 @@ import SearchBox from '../layout/SearchBox';
 import WorryBox from '../layout/WorryBox';
 import WorryWriteList from '../layout/HomeWriteList';
 import userInfo from '../json/useInfo.json';
+import Header from "../layout/Header";
 
 const HomePage = (props) => {
 
@@ -23,11 +24,14 @@ const HomePage = (props) => {
     }
 
     return ( 
-        <main>
-            <SearchBox attr="search-box"  worryCallbackFn={worryHandle} />
-            <WorryBox attr="worry-box" worryCallbackFn={worryHandle} checkedWorry={worryChched}/>
-            <WorryWriteList attr="main-worry-write-box" worryCallbackFn={worryHandle} checkedWorry={worryChched} search={searchText}/>
-        </main>
+        <React.Fragment>
+            <Header attr={"header_wrap"} />
+            <main>
+                <SearchBox attr="search-box"  worryCallbackFn={worryHandle} />
+                <WorryBox attr="worry-box" worryCallbackFn={worryHandle} checkedWorry={worryChched}/>
+                <WorryWriteList attr="main-worry-write-box" worryCallbackFn={worryHandle} checkedWorry={worryChched} search={searchText}/>
+            </main>
+        </React.Fragment>
     );
 }
 
